@@ -72,6 +72,7 @@ class _MyAppState extends State<MyApp> {
     timeview = Duration(seconds: times).toString().split('.').first;
     return MaterialApp(
         home: Scaffold(
+      backgroundColor: Colors.redAccent,
       body: Column(
         children: [
           Flexible(
@@ -82,7 +83,7 @@ class _MyAppState extends State<MyApp> {
                 color: Colors.black,
                 child: const Center(
                   child: Text(
-                    'My Timer',
+                    'Kyo\'s Timer',
                     style: TextStyle(color: Colors.white, fontSize: 50),
                   ),
                 ),
@@ -103,7 +104,7 @@ class _MyAppState extends State<MyApp> {
                         sec: -60, color: const Color.fromARGB(255, 41, 97, 46)),
                     timeButton(
                         sec: -30,
-                        color: const Color.fromARGB(255, 146, 60, 26)),
+                        color: const Color.fromARGB(255, 109, 16, 197)),
                   ],
                 ),
               )),
@@ -116,7 +117,7 @@ class _MyAppState extends State<MyApp> {
                 child: Center(
                   child: Text(
                     timeview,
-                    style: const TextStyle(color: Colors.amber, fontSize: 40),
+                    style: const TextStyle(color: Colors.amber, fontSize: 100),
                   ),
                 ),
               )),
@@ -165,7 +166,11 @@ class _MyAppState extends State<MyApp> {
         width: 100,
         height: 100,
         decoration: BoxDecoration(shape: BoxShape.circle, color: color),
-        child: Center(child: Text('$sec')),
+        child: Center(
+            child: Text(
+          '$sec',
+          style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        )),
       ),
     );
   }
